@@ -1,0 +1,603 @@
+
+
+:root{
+     /* --header-heigh: 50px; */
+}
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: "Amazon Ember", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+
+
+/* ################################## Top Header ################### */
+
+
+/* .. Left Navigatios  */
+.real-menu ul {
+    list-style: none;
+    font-size: 1.6rem;
+}
+
+.real-menu ul li{
+    padding: 1rem;
+    border-radius: 2px;
+    transition: all .4s;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.real-menu ul li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+.real-menu ul li a {
+    text-decoration: none;
+    color: darkgoldenrod;
+}
+.real-menu ul li:first-child {
+    background-color: #eee;
+
+}
+
+.real-menu ul li:hover {
+    background-color: #eee;
+}
+
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  background-color: #111111;
+  align-items: center;
+}
+
+.job_application{
+    color: #fff;
+    margin-right: 3rem;
+    text-decoration:none;
+
+}
+.fa-bars {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.logo-menu{
+  display: flex;
+  align-items: center;
+}
+
+.logo{
+  margin-left: 20px;
+  color: #fff;
+  font-size: 20px;
+}
+
+#body-overlay {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.5);
+}
+.real-menu {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  z-index: 4;
+  width: 300px;
+  height: 100%;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 6px 12px rgba(107, 82, 82, 0.3);
+  background-color: white;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: ease 0.2s all;
+}
+body.menu-open #body-overlay {
+  display: block;
+}
+body.menu-open .real-menu {
+  left: 0;
+}
+
+
+/* ///////////////////////////////////////////////// */
+
+
+
+
+ /* ######################### Header Secondary ######################## */
+ .header_secondary{
+     background-color: #F9F5D5;
+     position: relative;
+     padding: .5rem .5rem;
+     
+ }
+
+
+ .header_secondary .header_text{
+     width: 1140px;
+     margin: 0 auto;
+     letter-spacing: 1px;
+ }
+
+
+ .header_secondary .header_text .learn-more{
+     color: #0073A8;
+     text-decoration: none;
+ }
+
+ .header_secondary .header_text .learn-more:hover{
+     border-bottom: 1px solid #0073A8;
+ }
+
+
+ .header_secondary .icon_remove{
+     position: absolute;
+     right: 0;
+     top: 40%;
+     right:33px;
+     font-size: 20px;
+     cursor: pointer;
+     color: #1d2834;
+ }
+
+
+
+ .header_primary_main{
+     background-color: #232F3E;
+     min-height: 350px;
+     overflow: hidden;
+ }
+
+ /* #232F3E */
+
+
+
+ .header_primary_container{
+     width: 1140px;
+     margin: 50px auto;
+     padding: 30px 0;
+     
+ }
+
+
+ .header_primary_container h3.container{
+     font-size: 30px;
+     color: #fff;
+ }
+
+
+
+ /* ################## Search Compnent ################ */
+ .header_primary_form{
+     display: flex;
+     align-items: center;
+ }
+
+
+ .header_primary_search{
+     flex: 0 0 60%;
+ }
+
+ .header_primary_location{
+     flex: 0 0 30%;
+     margin-left: 13px;
+ }
+
+.search_location_container{
+    position: relative;
+}
+
+.icon_location{
+    position: absolute;
+    top: 31%;
+    color: rgb(216, 213, 213);
+    left: 10%;
+}
+
+
+
+ input{
+     padding: 13px 40px;
+     border-radius: 2px;
+     font-size: 16px;
+     border: 1px solid #ccc;
+ }
+
+
+ .header_primary_button{
+     padding: 12px 16px;
+     border-radius: 2px;
+     background-color: #FF9900;
+     text-align: center;
+     outline: none;
+     border: 1px solid #FF9900;
+     margin-left: 13px;
+ }
+
+
+ input:focus{
+     outline: none;
+ }
+
+
+ .search_icon{
+     font-size: 17px;
+     font-weight: bold;
+ }
+
+
+
+
+ /* ######################## Building JOB Section ################# */
+ .job_section_container{
+     height: auto;
+     background-color: #EAEDF2;
+     overflow: hidden;
+ }
+
+
+ .job_container{
+    width: 1140px;
+    margin: 50px auto;
+
+    
+    background-color: #fff;
+    display: flex;
+    text-align: center;
+    
+ }
+
+
+ 
+.job_container-box:not(:last-child){
+    border-right: 2px solid #eee;
+}
+.job_container-box{ padding: 30px; }
+.job_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 180px;
+}
+
+.job_link{
+    border: 1px solid #111111;
+    padding: 10px 20px;
+    width: 70%;
+
+    margin: 0 auto;
+
+    border-radius: 2px;
+    text-decoration: none;
+
+    color: #111111;
+
+    transition: all .4s;
+}
+
+.job_link:hover{
+    background-color: #35485f;
+    color: #fff;
+}
+
+
+.job_heading{
+    margin-bottom: 10px;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+
+.card_section_container{
+    height: auto;
+    background-color: #fff;
+    overflow: hidden;
+    padding: 30px 0;
+}
+
+
+
+.card_section_container .card_container{
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.card_heading{
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: 1px;
+    color: #111111;
+}
+
+.card_section_container .container{
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+    
+}
+
+.card{
+    width: 340px;
+    border: 1px solid #eee;
+}
+
+
+.card_header img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.card_body{
+    padding: 20px 20px;
+}
+
+.card_body h4{
+    margin-bottom: 20px;
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+
+.card_body p{
+    margin-bottom: 30px;
+    margin-left: 10px;
+    color: #313030;
+    font-size: 14px;
+    letter-spacing: .3px;
+    
+}
+
+
+.card_body a{
+    text-decoration: none;
+    font-size: 15px;
+    color: #0073A8;
+    font-weight: 600;
+}
+
+
+.card:hover{
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.144);
+}
+
+
+
+.card_body a:hover{
+    border-bottom: 1px solid #000;
+}
+
+
+a.card_link{
+    text-decoration: none;
+    color: #111111;
+}
+
+
+
+
+
+
+/* ##################### Section Founder ################
+#F3F3F3 */
+
+.section_founder_container{
+    background-color: #f3f3f3;
+    padding: 50px 0;
+}
+.container_founder{
+    width: 1140px;
+    margin: 30px auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.container_founder .founder_img{
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+}
+.section_founder{
+    flex: 1;
+}
+
+
+.founder_name{
+    font-size: 40px;
+    color: #111111;
+    font-weight: 100;
+}
+
+
+.section_content{
+    flex: 2;
+    position: relative;
+}
+
+.section_content .info{
+    position:absolute;
+    top:50px;
+    letter-spacing: 1px;
+    font-size: 18px;
+
+}
+
+.section_content p:not(:last-child){
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+
+
+.p-2::after{
+    position: absolute;
+    bottom: 4px;
+    content: "";
+    right: 0;
+    width: 100%;
+    height: 150px;
+    background:-webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0)), color-stop(85%, #EDEDED));
+
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #EDEDED 85%);
+}
+
+
+.seeStory{
+    border: 1px solid #111111;
+    padding: 10px 20px;
+    
+
+    
+
+    border-radius: 3px;
+    text-decoration: none;
+
+    color: #111111;
+
+    transition: all .4s;
+    margin-top: -5px;
+    /* z-index: 100; */
+
+    position: absolute;
+    left: 15px;
+}
+
+
+.seeStory:hover{
+    background-color: #35485f;
+    color: #fff;
+}
+
+
+.section_detail_container{
+    height: auto;
+    width: 100%;
+    padding: 30px 0;
+    background-color: #005276;
+    overflow: hidden;
+    
+}
+
+
+.section_detail{
+    width: 1140px;
+    margin: 30px auto;
+}
+
+.section_detail .detail_heading{
+    font-size: 45px;
+    color: #fff;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+.section_detail .detail_text{
+    width: 665px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.section_detail .btn_amazon{
+    border: 1px solid #fff;
+    padding: 12px 20px;
+    
+
+    
+
+    border-radius: 3px;
+    text-decoration: none;
+
+    color: #fff;
+
+    transition: all .4s;
+
+}
+
+.section_detail .btn_amazon:hover{
+    background-color: #fff;
+    color: #111111;
+    border: 1px solid #fff;
+}
+
+
+.section_social_container{
+    width: 100%;
+    padding: 30px 0;
+    background-color: #232F3E;
+    overflow: hidden;
+}
+
+.section_social_container .social_container{
+    width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+
+}
+
+.section_social_container .social_container .social_heading{
+    font-weight: normal;
+    color: #FF9900;
+    margin-right: 16px;
+    font-size: 15px;
+}
+
+ .social_container .icon_bar .icon{
+    font-size: 25px;
+    margin-left: 15px;
+    cursor: pointer;
+
+    border-radius: 3px;
+}
+
+.fa-facebook-f{
+    color: #fff;
+    background-color: #0c7fc2;
+    padding: 5px 10px;
+
+}
+
+.fa-linkedin-in{
+    color: #fff;
+    background-color: rgb(20, 127, 160);
+    padding: 5px 10px;
+}
+
+.fa-instagram{
+    background-color: rgb(207, 67, 16);
+    color: #fff;
+    padding: 5px 10px;
+}
+
+.fa-twitter{
+    background-color: skyblue;
+    color: #fff;
+    padding: 5px 10px;
+}
